@@ -1,0 +1,11 @@
+.card{
+    border: 1px solid black;
+    text-align: center;
+    color:white;
+    .card-image{
+        img{
+            width: 80px;
+            transform: rotate(-20deg);
+        }
+    }
+}
