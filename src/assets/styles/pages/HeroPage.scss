@@ -1,26 +1,65 @@
-.hero{
-    border: 1px solid blue;
-    // position: relative;
-    // padding: $padding 10px;
-    .hero__image{
-        z-index: -1;
-        position: relative;
-        img{
-            width: 100%;
-        }
+.hero {
+  //   border: 1px solid blue;
+  position: relative;
+
+  .hero__image {
+    animation-name: textzoom;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+
+    z-index: -1;
+    img {
+      width: 100%;
     }
-    .hero__card{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid orange; 
-      z-index: 1;
-      position: absolute;
-      top: 350px;
-      left: 16px;
-       .card-wrapper1{
-        background-color: #3151aa;
-       }
+  }
+  .hero__card {
+    animation-name: textzoom;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid orange;
+    z-index: 9;
+    // position: absolute;
+    top: 242px;
+    gap: 10px;
+    width: 100%;
+
+    .card-wrapper1 {
+      background-color: #3151aa;
     }
+    .card-wrapper2 {
+      background-color: #5b6149;
+    }
+    .card-wrapper3 {
+      background-color: #945a5c;
+    }
+  }
+  .hero__image-link {
+    // position: absolute;
+    // top: 365%;
+    text-align: center;
+    left: 80px;
+    margin: 32px;
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
+@keyframes textzoom {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 100%;
+  }
 }

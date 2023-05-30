@@ -1,0 +1,10 @@
+.service{
+    padding: $padding;
+    border: 1px solid red;
+    text-align: center;
+    .service-image{
+        img{
+            width: 20%;
+        }
+    }
+}
