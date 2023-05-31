@@ -6,7 +6,7 @@ export const Service=({image, text})=> {
         <div className="service-image">
       <img src={image}/>
         </div>
-      <p>{text}</p>
+      <span>{text}</span>
     </div>
   )
 }

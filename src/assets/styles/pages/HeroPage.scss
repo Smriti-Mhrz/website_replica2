@@ -54,6 +54,38 @@
       color: black;
     }
   }
+
+  .hero__service{
+    animation-name: sidezoom;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: initial;
+
+  }
+  .hero__advertise{
+    background-color: #3151aa;
+    color: #ffffff;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    
+    h2{
+      font-size: 36px;
+      font-weight: 400;
+    padding:10px 25px;
+    text-align: center;
+   }
+   button{
+    font-size: 20px;
+   }
+   
+  }
 }
 @keyframes textzoom {
   0% {
