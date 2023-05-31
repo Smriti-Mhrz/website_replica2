@@ -5,10 +5,8 @@
   .hero__image {
     animation-name: textzoom;
     animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: initial;
-    animation-direction: alternate;
-
+    animation-timing-function: ease-in-out;    
+    animation-fill-mode: backwards;
     z-index: -1;
     img {
       width: 100%;
@@ -17,17 +15,14 @@
   .hero__card {
     animation-name: textzoom;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: initial;
-    animation-direction: alternate;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // border: 1px solid orange;
     z-index: 9;
-    // position: absolute;
     top: 242px;
     gap: 10px;
     width: 100%;
@@ -55,13 +50,7 @@
     }
   }
 
-  .hero__service{
-    animation-name: sidezoom;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: initial;
 
-  }
   .hero__advertise{
     background-color: #3151aa;
     color: #ffffff;
@@ -80,9 +69,15 @@
       font-weight: 400;
     padding:10px 25px;
     text-align: center;
+    transform: rotate(360deg);
    }
    button{
+    padding: 17px 47px;
     font-size: 20px;
+    background-color: #5b6149;
+    &:hover{
+      background-color:  #4e533f;
+    }
    }
    
   }

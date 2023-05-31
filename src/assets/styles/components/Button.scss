@@ -1,6 +1,17 @@
 .button{
-    padding: 17px 47px;
-    background-color:  #3c496f;
-    border-radius: 25px;
+    button{
+        background-color: #3151AA;
+        border-radius: 25px;
     cursor: pointer;
+    border: none;
+    color: #ffffff;
+    text-shadow: 0 0 2px #ffffff;
+    // margin: 42px 46px 60px;
+    padding: 16px 62px 17px;
+    text-transform: uppercase;
+    &:hover{
+            background-color:  #3c496f;
+    
+        }
+}
 }

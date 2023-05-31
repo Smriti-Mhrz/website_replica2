@@ -40,8 +40,7 @@ export const HeroPage = () => {
           Image from <a href="https://billionphotos.com/">Billionphotos</a>
         </p>
       </div>
-      <div className="hero__service">
-        
+      <div className="hero__service">        
       <Service
           image={freetag} text="Free Cancellation"/>
           <Service
