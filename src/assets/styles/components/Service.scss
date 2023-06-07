@@ -1,29 +1,28 @@
-.service{
-    padding: $padding;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    animation-name: service;
-    animation-duration: 1s;
-    animation-timing-function:initial;
-    .service-image{
-        img{
-            width: 20%;
-        }
-
+.service {
+  padding: $padding;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  animation-name: servicefromside;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  .service-image {
+    img {
+      width: 20%;
     }
-    span{
-        color: #111111;
-        font-size: 20px;
-        margin: 20px 0px 24px;
-        font-weight: 600;
-    }
+  }
+  span {
+    color: #111111;
+    margin: 20px 0px 24px;
+    font-size: 22px;
+  }
 }
-@keyframes service{
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
+@keyframes servicefromside {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -1,31 +1,30 @@
 .hero {
-  //   border: 1px solid blue;
+  //   border: 1px solid blue;  
   position: relative;
-
   .hero__image {
     animation-name: textzoom;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
     animation-timing-function: ease-in-out;    
-    animation-fill-mode: backwards;
     z-index: -1;
     img {
       width: 100%;
     }
   }
-  .hero__card {
+  .hero__card {    
     animation-name: textzoom;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: initial;
-
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9;
-    top: 242px;
+    position: relative;
+    z-index: 1;
+    top: -24px;
     gap: 10px;
-    width: 100%;
+    max-width: 100%;
 
     .card-wrapper1 {
       background-color: #3151aa;
@@ -49,7 +48,6 @@
       color: black;
     }
   }
-
 
   .hero__advertise{
     background-color: #3151aa;
@@ -84,9 +82,12 @@
 }
 @keyframes textzoom {
   0% {
-    width: 10px;
+    transform: scale(0.2);
+    opacity: 0;
   }
+ 
   100% {
-    width: 100%;
+    transform: scale(1);
+    opacity: 1;
   }
 }
