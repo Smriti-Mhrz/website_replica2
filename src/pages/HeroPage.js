@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import heroImage from "../assets/images/heroimage.jpg";
 import atm from "../assets/images/atm.ico";
 import freetag from "../assets/images/freetag.png"
 import dollar from "../assets/images/dollarsign.png"
 import headphone from "../assets/images/headphone.png"
 import { Card, Service ,Button} from "../components";
+import Aos from "aos";
 
 export const HeroPage = () => {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+  });
   return (
     <div className="hero">
       <div className="hero__image">
@@ -50,8 +54,8 @@ export const HeroPage = () => {
       </div>
 
       <div className="hero__advertise">
-        <h2>Book a car rental near you by giving us a call!</h2>
-        <Button type="button" name="+12-345-678-89089"/>
+        <h2 data-aos="fade-right">Book a car rental near you by giving us a call!</h2>
+        <Button type="button" name="+12-345-678-89089" aos="fade-left"/>
       </div>
     </div>
   );

@@ -1,17 +1,17 @@
-import React from "react";
-import { Animator } from "react-scroll-motion";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Service = ({ image, text }) => {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+  });
   return (
     <div className="service">
-      {/* <ScrollConhtainer>
-      <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}/> */}
-      <div className="service-image">
+      <div className="service-image" data-aos="fade-right">
         <img src={image} />
       </div>
-      <span>{text}</span>
-      {/* </ScrollConhtainer> */}
+      <span data-aos="fade-right">{text}</span>
     </div>
   );
 };
-

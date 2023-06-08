@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import person from "../assets/images/kti.jpg";
 import img1 from "../assets/images/coimg1.jpg";
 import img2 from "../assets/images/coimg2.jpg";
@@ -10,17 +10,22 @@ import foregroundimage from "../assets/images/foregroundimage.jpg";
 import whatsapp from "../assets/images/whatsapp.png";
 import chat from "../assets/images/chat.png";
 import { Button } from "../components";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Coursel = () => {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+  });
   return (
     <div className="coursel__wrapper">
       <div className="wrapper-box"> </div>
 
       {/* ............Coursel section.......... */}
       <div className="coursel-image">
-        <img src={person} alt="girls" />
+        <img src={person} alt="girls" data-aos="fade-up"/>
       </div>
-      <div className="coursel-section">
+      <div className="coursel-section" data-aos="fade-left">
         <h2>Rent the perfect car</h2>
         <p>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -32,10 +37,10 @@ export const Coursel = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
         </span>
         <Button name="start now" />
-      </div>
       <p>
         Image from <a href="https://www.freepik.com/">Freepik</a>
       </p>
+      </div>
       <div className="coursel__wrapper2">
         <div className="wrapper2-image">
           <div className="image">
@@ -57,7 +62,7 @@ export const Coursel = () => {
             <img src={img6} alt="image" />
           </div>
         </div>
-        <div className="wrapper2-information">
+        <div className="wrapper2-information" data-aos="zoom-in">
           <h2>Car Rental Traveler Information</h2>
           <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -68,17 +73,17 @@ export const Coursel = () => {
           <p className="link">
             Images from <a href="https://www.freepik.com/">Freepik</a>
           </p>
-          <Button name="Learn More" />
+          <Button name="Learn More" aos="fade-up"/>
         </div>
       </div>
 
       {/*......... Last Part.............. */}
       <div className="last__part">
-        <div className="last-background"></div>
-        <div className="foreground-image">
+        <div className="last-background" data-aos="flip"></div>
+        <div className="foreground-image" data-aos="zoom-in">
           <img src={foregroundimage} alt="image" />
         </div>
-        <div className="paragraph">
+        <div className="paragraph" data-aos="zoom-in">
           <h2>Car Rentals from $14</h2>
           <p>
             Dignissim suspendisse in est ante in nibh mauris. Varius quam
@@ -89,19 +94,19 @@ export const Coursel = () => {
           <p>
             Images from <a href="https://www.freepik.com/">Freepik</a>
           </p>
-          <Button name="learn more" />
+          <Button name="learn more" aos="fade-up"/>
         </div>
       </div>
 
       {/* ......Contact Us Part........... */}
-      <section className="contact__wrapper">
+      <section className="contact__wrapper" data-aos="fade-up">
         <div className="wrapper-boxs">
           <h4>Manage Booking</h4>
           <p>Complete the form to review, cancel or extend your booking.</p>
           <input type="text" placeholder="Enter a valid email address" />
           <Button name="submit" />
         </div>
-        <div className="wrapper-boxs">
+        <div className="wrapper-boxs" data-aos="fade-up">
           <span className="boxs-image">
             <img src={whatsapp} alt="whatsapp" />
           </span>

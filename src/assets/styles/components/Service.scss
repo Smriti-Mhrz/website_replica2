@@ -3,10 +3,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  animation-name: servicefromside;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
   .service-image {
     img {
       width: 20%;
@@ -16,13 +12,5 @@
     color: #111111;
     margin: 20px 0px 24px;
     font-size: 22px;
-  }
-}
-@keyframes servicefromside {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }

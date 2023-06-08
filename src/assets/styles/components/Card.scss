@@ -1,23 +1,33 @@
-.card{
-    text-align: center;
-    color:#fff;
-    padding: $padding;
-    width: 300px;
+.card {
+  text-align: center;
+  color: #fff;
+  padding: $padding;
+  // overflow: hidden;
+  .card-image {
+    color: white;
+    img {
+      width: 80px;
+      transform: rotate(-20deg);
+    }
+  }
+  .card-title {
+    font-size: 20px;
+    margin: 16px;
+  }
+  .card-text {
+    font-weight: 400;
+    font-style: italic;
+    margin: 16px;
+  }
+}
 
-    .card-image{
-        img{
-            width: 80px;
-            transform: rotate(-20deg);
-            color: white;
-        }
-    }
-    .card-title{
-        font-size: 20px;
-        margin: 16px;
-    }
-    .card-text{
-        font-weight: 400;
-        font-style: italic;
-        margin: 16px;
-    }
+@media (min-width: 320px) and (max-width: 450px) {
+  .card {
+    width: 300px;
+  }
+}
+@media (min-width: 451px) and (max-width: 767px) {
+  .card {
+    width: 500px;
+  }
 }

@@ -1,35 +1,36 @@
 .hero {
-  //   border: 1px solid blue;  
-  position: relative;
+  //   border: 1px solid blue;
+  // position: relative;
   .hero__image {
     animation-name: textzoom;
     animation-duration: 1.5s;
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;    
+    animation-timing-function: ease-in-out;
     z-index: -1;
     img {
       width: 100%;
     }
   }
-  .hero__card {    
+  .hero__card {
     animation-name: textzoom;
     animation-duration: 1.5s;
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;   
+    animation-timing-function: ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 1;
-    top: -24px;
+    top: -32px;
     gap: 10px;
-    max-width: 100%;
+    // max-width: 100%;
 
     .card-wrapper1 {
       background-color: #3151aa;
     }
     .card-wrapper2 {
+      
       background-color: #5b6149;
     }
     .card-wrapper3 {
@@ -49,7 +50,7 @@
     }
   }
 
-  .hero__advertise{
+  .hero__advertise {
     background-color: #3151aa;
     color: #ffffff;
     margin: auto;
@@ -61,23 +62,24 @@
     align-items: center;
     justify-content: center;
     padding: 30px 10px;
-    
-    h2{
+    margin-top: 28px;
+
+    h2 {
       font-size: 36px;
       font-weight: 400;
-    padding:10px 25px;
-    text-align: center;
-    transform: rotate(360deg);
-   }
-   button{
-    padding: 17px 47px;
-    font-size: 20px;
-    background-color: #5b6149;
-    &:hover{
-      background-color:  #4e533f;
+      padding: 10px 25px;
+      text-align: center;
+      display: inline-block;
+      animation: rolling 2s ease-in-out ;
     }
-   }
-   
+    button {
+      padding: 17px 47px;
+      font-size: 20px;
+      background-color: #5b6149;
+      &:hover {
+        background-color: #4e533f;
+      }
+    }
   }
 }
 @keyframes textzoom {
@@ -85,9 +87,24 @@
     transform: scale(0.2);
     opacity: 0;
   }
- 
+
   100% {
     transform: scale(1);
     opacity: 1;
   }
+}
+@keyframes rolling {
+  0% {
+    transform:rotate(0deg);
+  }  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ....MEDIA QUERIES.......
+@media (min-width:451px) and (max-width:767px){
+   .hero__card{
+    // width: 100%;
+   }
 }
